@@ -1,34 +1,24 @@
-console.log('Hello world')
-console.log("This is my first program")
-console.log("Well come John your month salary is 500000")
-
-const num1 = 5;
-const num2 = 3;
-// add two numbers
-const sum = num1 + num2;
-// display the sum
-console.log('The sum of ' + num1 + ' and ' + num2 + ' is: ' + sum);
-
 // app.js or index.js
 const prompt = require('prompt-sync')(); // This line is essential
-console.log("starting")
-const name = prompt('Enter your name: ');
-console.log("Hello, ${name}");
-// program that checks if the number is positive, negative or zero
+console.log("starting");
+
+// program that performs addition, subtraction, multiplication and division on two numbers
 // input from the user
 const number = parseInt(prompt("Enter a number: "));
+const number2 = parseInt(prompt("Enter another number: "));
 
-// check if number is greater than 0
-if (number > 0) {
-    console.log("The number is positive");
-}
+// add numbers together
+const addSum = number + number2;
+console.log(number + " + " + number2 + " = " + addSum);
 
-// check if number is 0
-else if (number == 0) {
-  console.log("The number is zero");
-}
+// subtract a number from another
+const minusSum = number - number2;
+console.log(number + " - " + number2 + " = " + minusSum);
 
-// if number is less than 0
-else {
-     console.log("The number is negative");
-}
+// multiply numbers together
+const multiply = number - number2;
+console.log(number + " X " + number2 + " = " + multiply);
+
+// divide a number by another
+const divide = number / number2;
+console.log(number + " / " + number2 + " = " + divide);
