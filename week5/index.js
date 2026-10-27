@@ -11,6 +11,16 @@ app.get('/', (req, res) => {
     res.send('Hello! This is my first Express application.');
 });
 
+// Route to about page
+app.get('/about', function (req, res) { 
+    res.send('This is a basic Express application'); 
+});
+
+// Page with parameters inserted into URL
+app.get('/users/:userId/books/:bookId', function (req, res) { 
+    res.send(req.params); 
+});
+
 // Start server
 const PORT = 5000;
 
