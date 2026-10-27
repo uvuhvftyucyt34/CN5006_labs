@@ -80,6 +80,31 @@ app.get('/GetStudent/:id', (req, res) => {
     }); 
 });
 
+// Showing html form 
+app.get('/studentinfo', (req, res) => { 
+    res.sendFile('StudentInfo.html', { root: __dirname }); 
+});
+
+app.post('/submit-data', (req, res) => { 
+    const name = req.body.firstName + ' ' + req.body.lastName;
+    const age = req.body.myAge;
+    const Gender = ' Gender: ' + req.body.gender;
+    const qual = 'Qualification: ' + req.body.Qual;
+
+    console.log(req.body.Qual);
+
+    res.send({ 
+        status: true, 
+        message: 'Form Details', 
+        data: {
+            name: name,
+            age: age,
+            gender: Gender,
+            qualification: qual
+        }
+    });
+});
+
 // Start server
 const PORT = 5000;
 
